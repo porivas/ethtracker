@@ -1,0 +1,1 @@
+docker run --env-file twitter4j.properties ethtracker-1.0
