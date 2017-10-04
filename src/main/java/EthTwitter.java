@@ -1,5 +1,3 @@
-import twitter4j.ResponseList;
-import twitter4j.Status;
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
@@ -9,8 +7,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-//import com.fasterxml.jackson.core.JsonGenerationException;
-//import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
@@ -32,7 +28,7 @@ public class EthTwitter {
 
                 twitter.updateStatus("Ethereum price USD: " + price.USD + " EUR: " + price.EUR);
 
-                if(priceBefore == -1){
+                if(priceBefore < 0){
                     priceBefore = price.USD;
                 }
 
